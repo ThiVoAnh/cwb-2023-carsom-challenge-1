@@ -9,7 +9,7 @@ import joblib
 
 st.set_page_config(page_title = 'Car some price prediction page', page_icon=None, layout='centered', initial_sidebar_state='auto')
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data
 def load(isolationforest_path, label_encoder_path, dec_model_path):
     isolationforest = joblib.load(isolationforest_path)
     label_encoder = joblib.load(label_encoder_path)
